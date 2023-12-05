@@ -51,33 +51,11 @@ public class Game {
         return new ImageIcon("src/test.jpg");}
     }
 
-    public void gameStarter(){
-        Scanner scan = new Scanner(System.in);
-        boolean start = false;
-
-        JFrame frame = new JFrame(); // sets up background
-        ImageIcon icon = new ImageIcon("src/Start.jpg"); // sets initial image
-        JLabel label = new JLabel(icon);
-        frame.add(label);
-        label.setIcon(icon);
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // everything after this makes sure that the image can be seen
-        frame.pack();
-        frame.setVisible(true); // final viable code
-
-        while(!start){
-            System.out.println("Welcome to the game type y to start ");
-            if (scan.nextLine().equals("y")){ start = true;}
-        }
-
-        icon = new ImageIcon("src/babyPig.jpg");
-        label.setIcon(icon);
-
-       gameMenu();
-    }
 
     public void gameMenu() {
         System.out.println("Day: "+day);
+        System.out.println("Health: " + health);
+        System.out.println("Happiness: " + happiness);
 
 
         Scanner scan = new Scanner(System.in);
